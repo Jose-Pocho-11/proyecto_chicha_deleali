@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FAFCC35B-10EA-491C-A216-C8D2A106641E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>proyecto_chicha_deleali</RootNamespace>
+    <AssemblyName>proyecto_chicha_deleali</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.13.3\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="datagreviu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datagreviu.Designer.cs">
+      <DependentUpon>datagreviu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datagreviu_eliminados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="datagreviu_eliminados.Designer.cs">
+      <DependentUpon>datagreviu_eliminados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormActualizando_cantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActualizando_cantidad.Designer.cs">
+      <DependentUpon>FormActualizando_cantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormActualizar_nombre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActualizar_nombre.Designer.cs">
+      <DependentUpon>FormActualizar_nombre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormArbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormArbol.Designer.cs">
+      <DependentUpon>FormArbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCambiar_Contraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambiar_Contraseña.Designer.cs">
+      <DependentUpon>FormCambiar_Contraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCambiar_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCambiar_Usuario.Designer.cs">
+      <DependentUpon>FormCambiar_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEliminar_Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEliminar_Producto.Designer.cs">
+      <DependentUpon>FormEliminar_Producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormExtraerCantidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormExtraerCantidad.Designer.cs">
+      <DependentUpon>FormExtraerCantidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormIngresar_mas_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIngresar_mas_producto.Designer.cs">
+      <DependentUpon>FormIngresar_mas_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMeme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMeme.Designer.cs">
+      <DependentUpon>FormMeme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu_comida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu_comida.Designer.cs">
+      <DependentUpon>FormMenu_comida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu_inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu_inicio.Designer.cs">
+      <DependentUpon>FormMenu_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMostrar_eliminados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMostrar_eliminados.Designer.cs">
+      <DependentUpon>FormMostrar_eliminados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNuevo_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNuevo_producto.Designer.cs">
+      <DependentUpon>FormNuevo_producto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPreguntas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPreguntas.Designer.cs">
+      <DependentUpon>FormPreguntas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRecuperar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRecuperar.Designer.cs">
+      <DependentUpon>FormRecuperar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReporte.Designer.cs">
+      <DependentUpon>FormReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas.Designer.cs">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Inicio.Designer.cs">
+      <DependentUpon>Form_Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Resources\zdana.png" />
+    <None Include="Resources\dava.jpg" />
+    <None Include="Resources\pocho.jpg" />
+    <None Include="Resources\jesus.jpg" />
+    <None Include="Resources\andres grand.jpeg" />
+    <None Include="Resources\icons8-pregunta-32 %281%29.png" />
+    <None Include="Resources\Arbol de grafo.png" />
+    <None Include="Resources\icons8-árbol-32.png" />
+    <None Include="Resources\icons8-cellphone-64 %281%29.png" />
+    <None Include="Resources\icons8-cellphone-64.png" />
+    <None Include="Resources\reporteC.html" />
+    <None Include="Resources\Menu vertical bebidas restaurante blanco y negro %281%29.png" />
+    <None Include="Resources\trazo-rojo-pincel-dibujado-mano_263779-889-removebg-preview.png" />
+    <None Include="Resources\trazo-rojo-pincel-dibujado-mano_263779-889.jpg" />
+    <None Include="Resources\logo2-removebg-preview1.png" />
+    <None Include="Resources\carrito-de-compras.png" />
+    <None Include="Resources\icons8-carro-rápido-32.png" />
+    <None Include="Resources\icons8-food-50 %281%29.png" />
+    <None Include="Resources\icons8-food-50.png" />
+    <None Include="Resources\icons8-cup-50.png" />
+    <None Include="Resources\icons8-vaso-32.png" />
+    <None Include="Resources\camion-de-reparto.png" />
+    <None Include="Resources\icons8-vista-general-2-50.png" />
+    <None Include="Resources\icons8-documento-64.png" />
+    <None Include="Resources\icons8-collectibles-50 %281%29.png" />
+    <None Include="Resources\icons8-collectibles-50.png" />
+    <None Include="Resources\icons8-gear-32.png" />
+    <None Include="Resources\icons8-gear-30.png" />
+    <None Include="Resources\icons8-gear-64.png" />
+    <None Include="Resources\icons8-gear-24.png" />
+    <None Include="Resources\icons8-remove-32.png" />
+    <None Include="Resources\icons8-available-updates-48.png" />
+    <None Include="Resources\icons8-actualizaciones-disponibles-32.png" />
+    <None Include="Resources\icons8-añadir-32.png" />
+    <None Include="Resources\bin-icon-trash-can-collection-26-removebg-preview.png" />
+    <None Include="Resources\imagen_de_eliminar-removebg-preview.png" />
+    <None Include="Resources\imagen de eliminar1.png" />
+    <None Include="Resources\imagen de actulizar1.png" />
+    <None Include="Resources\imagen de agg1 - Copia.png" />
+    <None Include="Resources\imagen_de ajuste1.png" />
+    <None Include="Resources\imagen de eliminar.png" />
+    <None Include="Resources\imagen de agg1.png" />
+    <None Include="Resources\imagen de agg.png" />
+    <None Include="Resources\icono usuario.png" />
+    <None Include="Resources\icono de contraseña1.png" />
+    <None Include="Resources\icono de contraseña.png" />
+    <None Include="Resources\cerrar.png" />
+    <None Include="Resources\res.png" />
+    <None Include="Resources\maxi1.png" />
+    <None Include="Resources\minimazar.png" />
+    <None Include="Resources\maxi.png" />
+    <EmbeddedResource Include="datagreviu.resx">
+      <DependentUpon>datagreviu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datagreviu_eliminados.resx">
+      <DependentUpon>datagreviu_eliminados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActualizando_cantidad.resx">
+      <DependentUpon>FormActualizando_cantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActualizar_nombre.resx">
+      <DependentUpon>FormActualizar_nombre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArbol.resx">
+      <DependentUpon>FormArbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCambiar_Contraseña.resx">
+      <DependentUpon>FormCambiar_Contraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCambiar_Usuario.resx">
+      <DependentUpon>FormCambiar_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEliminar_Producto.resx">
+      <DependentUpon>FormEliminar_Producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormExtraerCantidad.resx">
+      <DependentUpon>FormExtraerCantidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIngresar_mas_producto.resx">
+      <DependentUpon>FormIngresar_mas_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMeme.resx">
+      <DependentUpon>FormMeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu_comida.resx">
+      <DependentUpon>FormMenu_comida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu_inicio.resx">
+      <DependentUpon>FormMenu_inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMostrar_eliminados.resx">
+      <DependentUpon>FormMostrar_eliminados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNuevo_producto.resx">
+      <DependentUpon>FormNuevo_producto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPreguntas.resx">
+      <DependentUpon>FormPreguntas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRecuperar.resx">
+      <DependentUpon>FormRecuperar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReporte.resx">
+      <DependentUpon>FormReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas.resx">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Inicio.resx">
+      <DependentUpon>Form_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Proyecto_python.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
